@@ -1,0 +1,161 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  color: rgba(255,255,255,0.5) !important;
+}
+
+.background {
+  height: 100vh;
+  background: #2F4858;
+  z-index: 1;
+}
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+nav.navbar.navbar-expand-lg.navbar-light{
+  z-index: 99 !important;
+  background-color: rgba(63, 63, 63, 0.0) !important;
+  background-blend-mode: multiply !important;
+  font-family: 'Questrial', sans-serif;
+  font-size: 1.25em !important;
+  line-height: 0.3em;
+
+}
+
+
+.border-bottom{
+  border-width: 0px !important;
+}
+
+$particleSize: 35vmin;
+$animationDuration: 12s;
+$amount: 100;
+.background .parti {
+  width: $particleSize;
+  height: $particleSize;
+  border-radius: $particleSize;
+  backface-visibility: hidden;
+  position: absolute;
+  animation-name: move;
+  animation-duration: $animationDuration;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  $colors: (
+    rgba($color: #9A67A5, $alpha: 0.4),
+    rgba($color: #FF6F91, $alpha: 0.4),
+    rgba($color: #257A3E, $alpha: 0.4),
+    rgba($color: #9BDEAC, $alpha: 0.4),
+    rgba($color: #309CFF, $alpha: 0.4),
+    rgba($color: #F7F5DD, $alpha: 0.4),
+    rgba($color: #FFCFFF, $alpha: 0.4),
+  );
+  @for $i from 1 through $amount {
+    &:nth-child(#{$i}) {
+      color: nth($colors, random(length($colors)));
+      top: random(100) * 1%;
+      left: random(100) * 1%;
+      animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
+      animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
+      transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
+      $blurRadius: (random() + 0.5) * $particleSize * 0.5;
+      $x: if(random() > 0.5, -1, 1);
+      box-shadow: ($particleSize * 2 * $x) 0 $blurRadius currentColor;
+    }
+  }
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+.Liana, .Software, .about, .connect, .work{
+  animation-name: slide;
+  opacity: 0;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  font-family: 'Questrial', sans-serif;
+  font-size: 6em;
+}
+.Software{
+  animation-delay: 0.14s;
+}
+.about{
+  animation-delay: 0.28s;
+}
+.connect{
+  animation-delay: 0.48s;
+}
+.work{
+  animation-delay: 0.35s;
+}
+.Liana{
+  margin-top: 1.2em;
+}
+
+@keyframes slide {
+  0% {
+      opacity: 1;
+      margin-left: -80%;
+      width: 300%;
+  }
+  50%{
+    opacity: 1;
+    margin-left: 80%;
+  }
+  70% {
+    opacity: 1;
+    margin-left: 0%;
+  }
+  80% {
+    opacity: 1;
+    margin-left: 15%;
+  }
+  90% {
+    opacity: 1;
+    margin-left: 0%;
+  }
+  100% {
+      opacity: 1;
+      margin-left: 2%;
+      width: 100%;
+  }
+}
+
+a{
+  color: rgba(255,255,255,0.5) !important;
+}
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.proj{
+  height: 300px;
+  border-radius: 20px;
+  margin: 10px;
+  background-color: rgba($color: #ffffff, $alpha: 0.2);
+}
+.topRow{
+  margin-top: 40px;
+}
+
+.nav-tabs > a{
+  background-color: rgba($color: #ffffff, $alpha: 0.0) !important;
+  border: rgba(255, 255, 255, 0.2);
+}
+.projHome{
+  width: 350px;
+  margin-top: 20px;
+  height: auto;
+  border-radius: 15px;
+}
+.techStack{
+  margin-right: 60px;
+  margin-top: 20px;
+}
