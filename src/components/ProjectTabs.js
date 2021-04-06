@@ -9,36 +9,41 @@ import Col from 'react-bootstrap/esm/Col';
 function ProjectTabs(props){
     return(
         
-        <Tabs defaultActiveKey="home" transition={false} id="noanim-tab-example">
+        <Tabs defaultActiveKey="home" className='projTab' transition={false} id="noanim-tab-example">
             <Tab eventKey="home" title={props.title}>
-                <Row>
+                <Row style={{marginTop: '13px'}}>
                     <Col>
-                        <video className='projHome' width="400" height="250" autoplay="autoplay" controls muted loop>
-                            <source src={props.picUrl} type="video/mp4"></source>
-                        </video>
+                        <h2 className="tabTitle">{props.title}</h2>
                     </Col>
-                    <Col className="techStack">
-                        <h6>{props.techStack}</h6>
+                    <Col>
+                        <h5 className="category">{props.category}</h5>
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
-                        <h3>{props.title}</h3>
+                    <Col sm={9}>
+                        <video className='projHome' width="400vw" height="250" autoPlay="autoplay" controls muted loop>
+                            <source src={props.picUrl} type="video/mp4"></source>
+                        </video>
+                    </Col>
+                    <Col sm={1} className="techStack">
+                        <h5 className="category">Tech</h5>
+                        <h6 style={{lineHeight: '1.6em'}}>{props.techStack}</h6>
                     </Col>
                     <Col>
-                        <h5 style={{marginTop: '10px', marginLeft: '-30px'}}>{props.category}</h5>
+                        <btn><h5 className="category projectButtons">Live Site</h5></btn>
+                        <h5 className="category projectButtons">Code</h5>
                     </Col>
                 </Row>
             </Tab>
             <Tab eventKey="about" title="About">
                 
             </Tab>
-            <Tab eventKey="site" title="Live Site">
+            {/* <Tab eventKey="site" title="Live Site">
                 
             </Tab>
             <Tab eventKey="code" title="Code">
                 
-            </Tab>
+            </Tab> */}
         </Tabs>
             
     );

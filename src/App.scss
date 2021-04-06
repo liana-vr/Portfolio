@@ -1,7 +1,8 @@
 body {
   overflow: hidden;
+  background-attachment: fixed;
   margin: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   color: rgba(255,255,255,0.5) !important;
 }
@@ -75,53 +76,90 @@ $amount: 100;
   opacity: 0;
   animation-timing-function: ease-out;
   animation-iteration-count: 1;
-  animation-duration: 0.8s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
   font-family: 'Questrial', sans-serif;
   font-size: 6em;
+  margin-left: 2%;
+}
+.anim{
+  animation-name: slideanim;
+  opacity: 0;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
 }
 .Software{
-  animation-delay: 0.14s;
+  animation-delay: 0.16s;
 }
 .about{
-  animation-delay: 0.28s;
+  animation-delay: 0.3s;
 }
 .connect{
-  animation-delay: 0.48s;
+  animation-delay: 0.51s;
 }
 .work{
-  animation-delay: 0.35s;
+  animation-delay: 0.4s;
 }
 .Liana{
   margin-top: 1.2em;
 }
 
-@keyframes slide {
+
+@keyframes slide{
   0% {
-      opacity: 1;
-      margin-left: -80%;
-      width: 300%;
+    opacity: 0;
+    filter: blur(1.5rem);
+    font-size: 6.5em;
+  }
+  20%{
+    filter: blur(1.5rem);
+    font-size: 6.5em;
+    opacity: 1;
   }
   50%{
+    filter: blur(0.8rem);
+    font-size: 6.2em;
     opacity: 1;
-    margin-left: 80%;
   }
   70% {
+    filter: blur(0.4rem);
+    font-size: 6em;
     opacity: 1;
-    margin-left: 0%;
-  }
-  80% {
-    opacity: 1;
-    margin-left: 15%;
-  }
-  90% {
-    opacity: 1;
-    margin-left: 0%;
   }
   100% {
-      opacity: 1;
-      margin-left: 2%;
-      width: 100%;
+    opacity: 1;
+    filter: blur(0rem);
+    font-size: 6em;
+  }
+}
+
+@keyframes slideanim{
+  0% {
+    opacity: 0;
+    scale: (0.6);
+    filter: blur(1.5rem);
+  }
+  20%{
+    filter: blur(1.5rem);
+    scale: (0.6);
+    opacity: 1;
+  }
+  50%{
+    filter: blur(0.8rem);
+    scale: (0.8);
+    opacity: 1;
+  }
+  70% {
+    filter: blur(0.4rem);
+    scale: (0.9);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    scale: (1);
+    filter: blur(0rem);
   }
 }
 
@@ -136,7 +174,7 @@ footer{
   width: 100%;
 }
 .proj{
-  height: 300px;
+  height: 550px;
   border-radius: 20px;
   margin: 10px;
   background-color: rgba($color: #ffffff, $alpha: 0.2);
@@ -144,18 +182,86 @@ footer{
 .topRow{
   margin-top: 40px;
 }
-
+.titan, .movinest{
+  margin-bottom: 40px;
+}
 .nav-tabs > a{
   background-color: rgba($color: #ffffff, $alpha: 0.0) !important;
   border: rgba(255, 255, 255, 0.2);
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  margin-top: 17px;
 }
 .projHome{
-  width: 350px;
+  width: auto;
   margin-top: 20px;
-  height: auto;
+  height: 20vw;
   border-radius: 15px;
 }
+.aboutMe, .contactMe{
+  height: 60vh;
+  border-radius: 20px;
+  margin: 10px;
+  margin-bottom: 2em;
+  background-color: rgba($color: #ffffff, $alpha: 0.2);
+}
+.aboutMe{
+  padding: 20px;
+  overflow-y: auto;
+  color: rgba($color: #ffffff, $alpha: 0.8);
+}
 .techStack{
-  margin-right: 60px;
+  margin-right: 0px;
   margin-top: 20px;
+  padding-left: 0px;
+}
+.Portfolio{
+  display: flex;
+  flex-direction: 'row';
+  width: 500px;
+  height: 85vh;
+  margin-left: 10px;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+.success{
+  color: rgba($color: #ffffff, $alpha: 0.7);
+  padding: 10px 15px;
+  margin-left: 75px;
+  border-radius: 20px;
+  background-color: #00a589;
+}
+.notSent{
+  color: rgba($color: #ffffff, $alpha: 0.7);
+  padding: 10px 15px;
+  margin-left: 15px;
+  border-radius: 20px;
+  background-color: #FF6F91;
+}
+.form-control{
+  background-color: rgba($color: #ffffff, $alpha: 0.2) !important;
+  border: rgba($color: #ffffff, $alpha: 0.2) !important;
+  color: rgba($color: #ffffff, $alpha: 0.8) !important;
+}
+.btn-primary, button:not(:disabled){
+  border-radius: 20px !important;
+  color: rgba($color: #ffffff, $alpha: 0.7) !important;
+  background-color: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%) !important;
+  border-color: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%) !important;
+}
+.category{
+  border: solid 1px rgba($color: #ffffff, $alpha: 0.5);
+  padding: 0.2em 0.6em;
+  border-radius: 20px;
+  margin-top: 0.7em;
+  width:fit-content; 
+  width:-webkit-fit-content; 
+  width:-moz-fit-content
+}
+.tabTitle{
+  font-size: 2.5em !important;
+}
+.projectButtons{
+  margin-left: auto !important;
+  margin-top: 33px !important;
 }
