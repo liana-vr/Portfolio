@@ -72,7 +72,7 @@ class ContactPage extends React.Component{
             <Container className="p-0" fluid={true}>
                 <Navbarcomp></Navbarcomp> 
                 <Container style={{marginTop: '6vh'}}>
-                    <h1 className="anim" style={{fontSize: '6em'}}>Connect</h1>
+                    <h1 className="anim bigText" style={{fontSize: '6em'}}>Connect</h1>
                 </Container>
                 <Container className="contactMe anim">
                     <Form onSubmit={this.handleSubmit} style={{width: '50vw', marginLeft: 'auto', marginRight: 'auto'}}>

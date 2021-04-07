@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 body {
   overflow: hidden;
   background-attachment: fixed;
+  font-family: 'Questrial', sans-serif;
   margin: 0;
   height: 100%;
   width: 100%;
-  color: rgba(255,255,255,0.5) !important;
+  color: rgba(255,255,255,0.9) !important;
+}
+html{
+  font-family: 'Questrial', sans-serif !important;
 }
 
 .background {
@@ -12,22 +17,17 @@ body {
   background: #2F4858;
   z-index: 1;
 }
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 nav.navbar.navbar-expand-lg.navbar-light{
   z-index: 99 !important;
   background-color: rgba(63, 63, 63, 0.0) !important;
   background-blend-mode: multiply !important;
-  font-family: 'Questrial', sans-serif;
   font-size: 1.25em !important;
   line-height: 0.3em;
 
 }
-
-
 .border-bottom{
   border-width: 0px !important;
 }
-
 $particleSize: 35vmin;
 $animationDuration: 12s;
 $amount: 100;
@@ -70,7 +70,6 @@ $amount: 100;
     transform: translate3d(0, 0, 1px) rotate(360deg);
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 .Liana, .Software, .about, .connect, .work{
   animation-name: slide;
   opacity: 0;
@@ -105,8 +104,6 @@ $amount: 100;
 .Liana{
   margin-top: 1.2em;
 }
-
-
 @keyframes slide{
   0% {
     opacity: 0;
@@ -174,10 +171,20 @@ footer{
   width: 100%;
 }
 .proj{
-  height: 550px;
+  width: 25vw;
+  height: auto;
+  max-height: 25vh;
+  min-height: 450px;
   border-radius: 20px;
+  padding: 20px;
   margin: 10px;
   background-color: rgba($color: #ffffff, $alpha: 0.2);
+}
+.aboutProjectContainer{
+  overflow-y: auto;
+  padding-bottom: 20px !important;
+  max-height: 30vh;
+  color: rgba($color: #ffffff, $alpha: 0.9);
 }
 .topRow{
   margin-top: 40px;
@@ -188,14 +195,17 @@ footer{
 .nav-tabs > a{
   background-color: rgba($color: #ffffff, $alpha: 0.0) !important;
   border: rgba(255, 255, 255, 0.2);
-  border-top-left-radius: 10px !important;
-  border-top-right-radius: 10px !important;
+  border-radius: 20px !important;
   margin-top: 17px;
 }
+.nav-tabs{
+  border-bottom: none !important;
+  margin-right: 1em !important;
+}
 .projHome{
-  width: auto;
+  width: 30vw;
+  height: auto;
   margin-top: 20px;
-  height: 20vw;
   border-radius: 15px;
 }
 .aboutMe, .contactMe{
@@ -210,16 +220,13 @@ footer{
   overflow-y: auto;
   color: rgba($color: #ffffff, $alpha: 0.8);
 }
-.techStack{
-  margin-right: 0px;
-  margin-top: 20px;
-  padding-left: 0px;
-}
 .Portfolio{
   display: flex;
   flex-direction: 'row';
-  width: 500px;
+  width: 700px;
   height: 85vh;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
   margin-left: 10px;
   margin-top: 10px;
   overflow-x: auto;
@@ -251,17 +258,57 @@ footer{
 }
 .category{
   border: solid 1px rgba($color: #ffffff, $alpha: 0.5);
-  padding: 0.2em 0.6em;
+  padding: 0.4em 0.8em;
   border-radius: 20px;
-  margin-top: 0.7em;
   width:fit-content; 
   width:-webkit-fit-content; 
   width:-moz-fit-content
 }
 .tabTitle{
   font-size: 2.5em !important;
+  color: rgba($color: #ffffff, $alpha: 0.8);
 }
 .projectButtons{
-  margin-left: auto !important;
-  margin-top: 33px !important;
+  float: right !important;
+}
+.techStack{
+  margin-top: 1.5em;
+  width: 10em;
+  font-size: 1.1em !important;
+  color: rgba($color: #ffffff, $alpha: 0.8);
+}
+mark{
+  color: #ffffff;
+  background-color: rgba($color: #ffffff, $alpha: 0.0) !important;
+  font-weight: bold;  
+}
+.mt-5, .bigText, .form-label{
+  color: rgba($color: #ffffff, $alpha: 0.5);
+}
+h1, h2, h3, h4, h5, h6, p, a, footer, .form-label, .btn {
+  font-family: 'Questrial', sans-serif;
+}
+span.navbar-toggler-icon{
+  background-color: rgba($color: #ffffff, $alpha: 0.4) !important;
+  border-radius: 20% !important;
+}
+.liveSite{
+  border-color: aqua;
+  color: aqua;
+  cursor: pointer;
+}
+.liveSite:hover{
+  border-color: #2fcac2;
+  color: white;
+  background-color: #2fcac2;
+}
+.code{
+  border-color: #ff51bc;
+  color: #ff51bc;
+  cursor: pointer;
+}
+.code:hover{
+  border-color: #ff51bc;
+  color: white;
+  background-color: #ff51bc;
 }

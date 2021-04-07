@@ -8,7 +8,7 @@ function AboutPage(props){
         <Container className="p-0" fluid={true}>
             <Navbarcomp></Navbarcomp> 
             <Container style={{marginTop: '6vh'}}>
-                <h1 className="anim" style={{fontSize: '6em'}}>Who Is She?</h1>
+                <h1 className="anim bigText" style={{fontSize: '6em'}}>Who Is She?</h1>
             </Container>
             <Container className="aboutMe anim">
                 <p style={{padding: '2em', fontSize: '1.25em'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 

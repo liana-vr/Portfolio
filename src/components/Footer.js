@@ -12,7 +12,7 @@ function Footer(){
                         Liana 2021
                     </Col>
                     <Col className="p-0 d-flex justify-content-end" md={3} sm={6}>
-                        Have a lovely day
+                    Mā te aroha i hanga 🤍
                     </Col>
                 </Row>
             </Container>

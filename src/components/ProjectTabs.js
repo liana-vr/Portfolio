@@ -3,47 +3,53 @@ import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
-
-
+import Laurier from '../pages/Laurier';
+import Eventfriend from '../pages/Eventfriend';
+import Titan from '../pages/Titan';
+import Movinest from '../pages/Movinest';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import 'font-awesome/css/font-awesome.min.css';
+import TabTopRow from './TabTopRow';
 
 function ProjectTabs(props){
+
+    const laurier = props.laurier;
+    const eventfriend = props.eventfriend;
+    const titan = props.titan;
+    const movie = props.movie;
+
     return(
         
         <Tabs defaultActiveKey="home" className='projTab' transition={false} id="noanim-tab-example">
-            <Tab eventKey="home" title={props.title}>
-                <Row style={{marginTop: '13px'}}>
-                    <Col>
-                        <h2 className="tabTitle">{props.title}</h2>
-                    </Col>
-                    <Col>
-                        <h5 className="category">{props.category}</h5>
-                    </Col>
-                </Row>
+            <Tab eventKey="home" title="Glance">
+                <TabTopRow title={props.title}></TabTopRow>
                 <Row>
-                    <Col sm={9}>
+                    <Col sm={6}>
                         <video className='projHome' width="400vw" height="250" autoPlay="autoplay" controls muted loop>
                             <source src={props.picUrl} type="video/mp4"></source>
                         </video>
                     </Col>
-                    <Col sm={1} className="techStack">
-                        <h5 className="category">Tech</h5>
-                        <h6 style={{lineHeight: '1.6em'}}>{props.techStack}</h6>
-                    </Col>
-                    <Col>
-                        <btn><h5 className="category projectButtons">Live Site</h5></btn>
-                        <h5 className="category projectButtons">Code</h5>
+                    <Col className="d-flex justify-content-end">
+                        <div className="techStack">
+                            <p className="category" style={{lineHeight: '1.6em', padding: '1em'}}>{props.techStack}</p>
+                        </div>
                     </Col>
                 </Row>
             </Tab>
-            <Tab eventKey="about" title="About">
-                
+            <Tab eventKey="about" title="Details">
+                {props.title === "Laurier" 
+                    ? <Laurier/>
+                    : (props.title === "Eventfriend"
+                        ? <Eventfriend/>
+                        : (props.title == "Titan"
+                            ? <Titan/> 
+                            : <Movinest/>))
+                }
+                <div style={{marginLeft: 'auto', marginRight:'auto', paddingTop: '5px', textAlign: 'center'}} >
+                    <i class="fa fa-chevron-down"></i>
+                </div>
             </Tab>
-            {/* <Tab eventKey="site" title="Live Site">
-                
-            </Tab>
-            <Tab eventKey="code" title="Code">
-                
-            </Tab> */}
+            <Tab eventKey="media" title="Media"></Tab>
         </Tabs>
             
     );

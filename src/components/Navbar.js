@@ -16,7 +16,7 @@ function Navbarcomp (props){
     return(
         <Container className="p-0" fluid={true}>
             <Navbar expand="lg">
-            <Navbar className="liana">Liana van Rensburg</Navbar>
+            <Navbar className="liana bigText">Liana van Rensburg</Navbar>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
             <Navbar.Collapse id="navbar-toggle">
                 <Nav className="ml-auto">
