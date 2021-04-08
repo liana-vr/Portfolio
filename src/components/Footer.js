@@ -9,7 +9,7 @@ function Footer(){
             <Container fluid={true}>
                 <Row className="justify-content-between p-3">
                     <Col className="p-0" md={3} sm={6}>
-                        Liana 2021
+                    <i class="fa fa-copyright"></i> Liana 2021
                     </Col>
                     <Col className="p-0 d-flex justify-content-end" md={3} sm={6}>
                     Mā te aroha i hanga 🤍

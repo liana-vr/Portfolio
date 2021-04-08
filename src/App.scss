@@ -178,7 +178,7 @@ footer{
   border-radius: 20px;
   padding: 20px;
   margin: 10px;
-  background-color: rgba($color: #ffffff, $alpha: 0.2);
+  background-color: rgba($color: #000000, $alpha: 0.3);
 }
 .aboutProjectContainer{
   overflow-y: auto;
@@ -203,7 +203,7 @@ footer{
   margin-right: 1em !important;
 }
 .projHome{
-  width: 30vw;
+  width: 26vw;
   height: auto;
   margin-top: 20px;
   border-radius: 15px;
@@ -213,7 +213,7 @@ footer{
   border-radius: 20px;
   margin: 10px;
   margin-bottom: 2em;
-  background-color: rgba($color: #ffffff, $alpha: 0.2);
+  background-color: rgba($color: #000000, $alpha: 0.3);
 }
 .aboutMe{
   padding: 20px;
@@ -285,7 +285,7 @@ mark{
 .mt-5, .bigText, .form-label{
   color: rgba($color: #ffffff, $alpha: 0.5);
 }
-h1, h2, h3, h4, h5, h6, p, a, footer, .form-label, .btn {
+h1, h2, h3, h4, h5, h6, p, a, footer, .form-label, .btn, .liana, li {
   font-family: 'Questrial', sans-serif;
 }
 span.navbar-toggler-icon{

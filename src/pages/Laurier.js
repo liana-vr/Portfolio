@@ -13,12 +13,12 @@ function Laurier(props){
             <Row>
                 <Col>
                     <Container style={{padding: '0'}} className="aboutProjectContainer">
-                    <p>Laurier is an ecommerce application I designed and built with the fashion and lifestyle industries in mind. For this project I created a multi-project solution using 
-                        <mark>ASP.Net Core</mark> and <mark>Angular</mark>. 
-                        I used <mark>Stripe</mark> for payment processing and <mark>Redis</mark> for storing the shopping cart. Data is persisted on two separate <mark>PotgreSQL</mark> databases; 
-                        one for user identity and the other for product data. Laurier was deployed using <mark>Linux and Digital Ocean</mark> and I used GitHub for version control.</p>
-                    <p>This Project followed the <mark>Specification Pattern</mark> and utilised the <mark>Repository and Unit of Work Pattern</mark>.</p>
-                    <h5>Features: </h5>
+                    <p>Laurier is an e-commerce B2C web application I designed and built with the Luxury Goods Consumer in mind. I created a multi-project solution using 
+                        <mark>ASP.Net Core</mark> and a single-page client app using <mark>Angular</mark> and <mark>TypeScript</mark>. 
+                        I used <mark>Stripe</mark> for payment processing and <mark>Redis</mark> for storing the shopping cart. Data is persistent on two separate <mark>PotgreSQL</mark> databases; 
+                        one for user identity and the other for product data. Laurier was deployed using <mark>Docker, Linux</mark> and <mark>Digital Ocean</mark> and I used GitHub for version control.</p>
+                    <p>This Project followed the <mark>Specification Pattern</mark> and the <mark>Repository + Unit of Work Pattern</mark>.</p>
+                    <h5>Functionality: </h5>
                         <ul>
                             <li>Secure Login/Logout and Registration using <mark>ASP.NET Identity</mark></li>
                             <li>Paging, Sorting and Filtering products</li>
@@ -29,6 +29,9 @@ function Laurier(props){
                             <li>Creating orders from shopping cart and pay through secure checkout</li>
                             <li>User-friendly client side error messages</li>
                         </ul>
+                        <h5>Features still to come: </h5>
+                        <p>At the moment Laurier is not responsive and is only functional on desktop. This is something I am currently working on.</p>
+
                     </Container>
                 </Col>
             </Row>

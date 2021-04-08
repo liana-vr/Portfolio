@@ -7,7 +7,6 @@ import Laurier from '../pages/Laurier';
 import Eventfriend from '../pages/Eventfriend';
 import Titan from '../pages/Titan';
 import Movinest from '../pages/Movinest';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'font-awesome/css/font-awesome.min.css';
 import TabTopRow from './TabTopRow';
 
@@ -22,7 +21,7 @@ function ProjectTabs(props){
         
         <Tabs defaultActiveKey="home" className='projTab' transition={false} id="noanim-tab-example">
             <Tab eventKey="home" title="Glance">
-                <TabTopRow title={props.title}></TabTopRow>
+                <TabTopRow title={props.title} responsive={props.responsive}></TabTopRow>
                 <Row>
                     <Col sm={6}>
                         <video className='projHome' width="400vw" height="250" autoPlay="autoplay" controls muted loop>
@@ -45,11 +44,13 @@ function ProjectTabs(props){
                             ? <Titan/> 
                             : <Movinest/>))
                 }
-                <div style={{marginLeft: 'auto', marginRight:'auto', paddingTop: '5px', textAlign: 'center'}} >
+                <div style={{marginLeft: 'auto', marginRight:'auto', paddingTop: '0px', textAlign: 'center'}} >
                     <i class="fa fa-chevron-down"></i>
                 </div>
             </Tab>
-            <Tab eventKey="media" title="Media"></Tab>
+            <Tab eventKey="media" title="Media">
+
+            </Tab>
         </Tabs>
             
     );
