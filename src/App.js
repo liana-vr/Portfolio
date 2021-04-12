@@ -1,22 +1,24 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Link
 } from "react-router-dom";
+
 import Container from 'react-bootstrap/Container';
-
-
+import { pdfjs } from 'react-pdf'
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import './App.scss';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import WorkPage from './pages/WorkPage';
 import ContactPage from './pages/ContactPage';
+import Test from './components/ResumeDownload';
+
+pdfjs.GlobalWorkerOptions.workerSrc = 'pdf.worker.min.js';
 
 class App extends React.Component {
-
+  
   constructor(props){
     super(props);
     this.state = {
@@ -26,6 +28,7 @@ class App extends React.Component {
         { title: 'Who Is She?', path: '/about'},
         { title: 'Work', path: '/work'},
         { title: 'Contact', path: '/contact'},
+        { title: 'Resume', path: '/resume'}
       ],
       home: {
         title: "Liana van Rensburg",
@@ -80,12 +83,11 @@ class App extends React.Component {
         <span className="parti"></span>
           <Router>
             <Container className="p-0" fluid={true}>
-              
+            
               <Route path="/" exact render={() => <HomePage title={this.state.home.title}/>}/>
               <Route path="/about" exact render={() => <AboutPage title={this.state.about.title}/>}/>
               <Route path="/work" exact render={() => <WorkPage title={this.state.work.title}/>}/>
               <Route path="/contact" exact render={() => <ContactPage title={this.state.contact.title}/>}/>
-
             </Container>
             <Footer></Footer>
           </Router>

@@ -40,7 +40,7 @@ function ProjectTabs(props){
                     ? <Laurier/>
                     : (props.title === "Eventfriend"
                         ? <Eventfriend/>
-                        : (props.title == "Titan"
+                        : (props.title === "Titan"
                             ? <Titan/> 
                             : <Movinest/>))
                 }
